@@ -2,7 +2,7 @@
  * Parameterized test for a simple calculator class
  */
 
-package com.kots.practice;
+package com.kots.practice.junit_parameterized_mocks;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
