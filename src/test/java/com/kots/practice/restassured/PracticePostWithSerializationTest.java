@@ -1,13 +1,13 @@
 package com.kots.practice.restassured;
 
 import com.kots.practice.restassured.json.Card;
-import io.restassured.RestAssured.*;
+
 import static io.restassured.RestAssured.*;
 
 import io.restassured.response.Response;
 import org.junit.Test;
 
-public class PracticePostWithSerialization extends BaseTestData{
+public class PracticePostWithSerializationTest extends BaseTestData{
 
     @Test
     public void testCardCreationWithSerialization() {

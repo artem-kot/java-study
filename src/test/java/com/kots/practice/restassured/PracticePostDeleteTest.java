@@ -9,7 +9,7 @@ import org.junit.Before;
 
 import java.io.File;
 
-public class PracticePostDelete extends BaseTestData {
+public class PracticePostDeleteTest extends BaseTestData {
 
     static String cardId = "";
     static Response response = null;

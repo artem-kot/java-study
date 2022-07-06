@@ -1,12 +1,11 @@
 package com.kots.practice.restassured;
 
 import io.restassured.response.Response;
-import org.junit.Before;
 import org.junit.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class PracticeGet extends BaseTestData{
+public class PracticeGetTest extends BaseTestData{
 
     @Test
     public void testGetUserInfo() {

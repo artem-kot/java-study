@@ -1,16 +1,16 @@
 package com.kots.practice.restassured;
 
-import io.restassured.RestAssured.*;
+import com.kots.practice.restassured.json.Profile;
+
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 
 import io.restassured.response.Response;
 import org.junit.Test;
-import org.junit.Before;
 
 import java.io.File;
 
-public class PracticePatch extends BaseTestData {
+public class PracticePatchTest extends BaseTestData {
 
     @Test
     public void testPatchUser() {
@@ -26,5 +26,19 @@ public class PracticePatch extends BaseTestData {
         response.then().assertThat()
                 .statusCode(200)
                 .body("data.name", equalTo("James Baxtor"));
+    }
+
+    @Test
+    public void testPatchUserWithSerialization() {
+        Profile profile = new Profile("Mantis Cat", "A cat and a mantis");
+        given()
+                .auth().oauth2(token)
+                .headers("Content-type", "application/json")
+                .and()
+                .body(profile)
+                .when()
+                .patch("/api/users/me")
+                .then()
+                .statusCode(200);
     }
 }
