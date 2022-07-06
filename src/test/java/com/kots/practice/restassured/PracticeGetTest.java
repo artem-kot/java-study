@@ -14,7 +14,7 @@ public class PracticeGetTest extends BaseTestData{
                 .oauth2(token)
                 .get("/api/users/me")
                 .then().statusCode(200)
-                .assertThat().body("data.name", equalTo("Аристарх Сократович"));
+                .assertThat().body("data.name", equalTo("James Baxtor"));
     }
 
     @Test
@@ -28,6 +28,6 @@ public class PracticeGetTest extends BaseTestData{
     @Test
     public void testUserOccupation() {
         Response response = given().auth().oauth2(token).get("/api/users/me");
-        response.then().assertThat().body("data.about", equalTo("Автор автотестов"));
+        response.then().assertThat().body("data.about", equalTo("Horse on a ball (or is it?)"));
     }
 }

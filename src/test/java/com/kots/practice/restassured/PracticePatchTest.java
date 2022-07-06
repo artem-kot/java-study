@@ -30,7 +30,7 @@ public class PracticePatchTest extends BaseTestData {
 
     @Test
     public void testPatchUserWithSerialization() {
-        Profile profile = new Profile("Mantis Cat", "A cat and a mantis");
+        Profile profile = new Profile("James Baxtor", "Horse on a ball (or is it?)");
         given()
                 .auth().oauth2(token)
                 .headers("Content-type", "application/json")

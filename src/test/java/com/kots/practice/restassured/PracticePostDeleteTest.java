@@ -1,12 +1,14 @@
 package com.kots.practice.restassured;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;
 
+import com.kots.practice.restassured.json.Card;
+import com.kots.practice.restassured.json.Data;
 import io.restassured.response.Response;
 import org.junit.Test;
 import org.junit.Before;
-
 import java.io.File;
 
 public class PracticePostDeleteTest extends BaseTestData {
@@ -22,7 +24,7 @@ public class PracticePostDeleteTest extends BaseTestData {
     @Test
     public void testNewCardCreation() {
         File json = new File("src/test/resources/newCard.json");
-        response =
+        Response response =
                 given()
                 .header("Content-type", "application/json")
                 .auth().oauth2(token)
@@ -30,22 +32,27 @@ public class PracticePostDeleteTest extends BaseTestData {
                 .body(json)
                 .when()
                 .post("/api/cards");
-//                cardId = response.body("data._id").toString();
-        response.then().assertThat().body("data._id", notNullValue())
-                .and()
-                .statusCode(201);
-        System.out.println(response);
+        response.then().statusCode(201);
+        Data data = response.as(Data.class);
+//        cardId = card.get_id();
+        assertThat(data, notNullValue());
     }
 
-    @Test
-    public void testExistingCardRemoval() {
-
-        Response response =
-                given()
-                .auth()
-                .oauth2(token)
-                .delete("/api/cards/" + cardId);
-//                cardId = response.body("data._id").toString();
-        System.out.println(cardId);
-    }
+//    @Test
+//    public void testExistingCardRemoval() {
+//        Response response =
+//                given()
+//                .auth()
+//                .oauth2(token)
+//                .delete("/api/cards/" + cardId);
+//        response.then().statusCode(200);
+//        Data data = response.as(Data.class);
+//        Card card = data.getCard();
+//        assertThat(card.getOwner(),notNullValue());
+//        response = given()
+//                .auth()
+//                .oauth2(token)
+//                .delete("/api/cards" + cardId);
+//        response.then().statusCode(404);
+//    }
 }
