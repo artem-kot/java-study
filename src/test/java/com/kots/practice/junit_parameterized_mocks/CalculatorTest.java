@@ -7,7 +7,7 @@ package com.kots.practice.junit_parameterized_mocks;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
+import io.qameta.allure.junit4.DisplayName;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
@@ -35,6 +35,7 @@ public class CalculatorTest {
         };
     }
     @Test
+    @DisplayName("Simple calculator test")
     public void calTest() {
         Calculator calculator = new Calculator();
         int actual = calculator.sum(number1, number2);

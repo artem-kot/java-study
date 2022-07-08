@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-
+import io.qameta.allure.junit4.DisplayName;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -18,6 +18,7 @@ public class CarTest {
     CarWheels wheelsStub;
 
     @Test
+    @DisplayName("Sample test with mock")
     public void carBrandTest() {
         carMock.setCarBrand("BMW");
         carMock.setCarBrand("BMW");
@@ -26,6 +27,7 @@ public class CarTest {
     }
 
     @Test
+    @DisplayName("Samplpe test with a stub")
     public void carEnginePowerTest() {
         Car car = new Car(engineStub);
         assertEquals(0, car.getEnginePower());
@@ -34,6 +36,7 @@ public class CarTest {
     }
 
     @Test
+    @DisplayName("Advanced test with a stub")
     public void carWheelsCountTest() {
         Car car = new Car(wheelsStub);
         Mockito.when(wheelsStub.wheelsCount(2,2)).thenReturn(5);
