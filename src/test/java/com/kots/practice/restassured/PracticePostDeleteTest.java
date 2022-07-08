@@ -4,7 +4,6 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;
 
-import com.kots.practice.restassured.json.Card;
 import com.kots.practice.restassured.json.Data;
 import io.restassured.response.Response;
 import org.junit.Test;
