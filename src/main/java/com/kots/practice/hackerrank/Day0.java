@@ -1,10 +1,11 @@
+/**
+ * Stdin for Hello, World!
+ */
+
 package com.kots.practice.hackerrank;
 
 import java.util.Scanner;
 
-/**
- * Stdin for Hello, World!
- */
 
 public class Day0 {
     /**
