@@ -2,7 +2,7 @@
  * Data types challenge
  */
 
-package com.kots.practice.hackerrank;
+package com.kots.practice.hackerrank.thirtydayschallenge;
 
 import java.util.Scanner;
 
