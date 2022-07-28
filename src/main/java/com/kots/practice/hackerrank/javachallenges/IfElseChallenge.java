@@ -20,29 +20,24 @@ import java.util.Scanner;
 public class IfElseChallenge {
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args){
-        int n = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
-        if (n % 2 != 0 || n >= 6 && n <= 20){
-            System.out.println("Weird");
-        } else {
-            System.out.println("Not Weird");
-        }
-        scanner.close();
-    }
-
     /**
      * The method is created explicitly for unit test of the provided solution,
      * which can be found in test/java/com.kots.practice.hackerrank.javachallenges/IfElseChallengeTest
      * @param n input parameter, which can be parameterized.
      * @return String with a result according to a task.
      */
-    public String challengeMethod(int n){
+    public static String challengeMethod(int n){
         if (n % 2 != 0 || n >= 6 && n <= 20){
             return "Weird";
         } else {
             return "Not Weird";
         }
+    }
+
+    public static void main(String[] args){
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        System.out.println(challengeMethod(n));
+        scanner.close();
     }
 }
