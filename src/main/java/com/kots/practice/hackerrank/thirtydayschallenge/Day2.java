@@ -29,7 +29,7 @@ public class Day2 {
     public static int result(double mealCost, int tipPercent, int taxPercent) {
         double tip = mealCost * tipPercent / 100;
         double tax = mealCost * taxPercent / 100;
-        return (int) (mealCost+tip+tax);
+        return (int) Math.round(mealCost + tip + tax);
     }
 
     public static void main(String[] args) throws IOException {
