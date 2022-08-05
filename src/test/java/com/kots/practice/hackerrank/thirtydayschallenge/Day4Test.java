@@ -30,7 +30,7 @@ public class Day4Test {
     }
 
     @Test
-    public void Day4Test() {
+    public void day4Test() {
         Day4 person = new Day4(age);
         assertThat(expectedAmIOldStatement, equalTo(person.amIOld()));
         person.yearPasses();
