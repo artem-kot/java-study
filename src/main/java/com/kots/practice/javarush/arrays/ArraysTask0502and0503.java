@@ -17,22 +17,33 @@ public class ArraysTask0502and0503 {
         for(int j=0; j<10; j++){
             System.out.print(sampleArray[j] + " | ");
         }
-        System.out.println("\n");
+        System.out.println();
 
 //        task 0502: fill in string values "Odd" or "Even" into array based on the oddity of the element index.
         System.out.println("Task 0502");
-
-
+        String[] oddityArray = new String[20];
+        for(int i=0; i<oddityArray.length; i++){
+            if(i % 2 == 0){
+                oddityArray[i] = "Even";
+            } else {
+                oddityArray[i] = "Odd";
+            }
+        }
+        System.out.print("Array: | ");
+        for(int i = 0; i<oddityArray.length; i++){
+            System.out.print(oddityArray[i] + " | ");
+        }
+        System.out.println();
 
 //        task 0503: substitute even elements of an array with with an opposite modality number (e.g. 7 → -7)
         System.out.println("Task 0503");
         int[] array = new int[]{-1, 2, 3, -4, -5};
 
-        System.out.print("Array: |");
+        System.out.print("Array: | ");
         for(int i=0; i<array.length;i++){
             System.out.print(array[i]+ " | ");
         }
-        System.out.println("");
+        System.out.println();
 
         for(int i=0; i<array.length; i++){
             if(array[i] % 2 == 0){
@@ -44,8 +55,6 @@ public class ArraysTask0502and0503 {
         for(int i=0; i<array.length;i++){
             System.out.print(array[i]+ " | ");
         }
-        System.out.println("");
-
-
+        System.out.println();
     }
 }
