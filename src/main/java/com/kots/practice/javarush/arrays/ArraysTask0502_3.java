@@ -1,8 +1,6 @@
 package com.kots.practice.javarush.arrays;
 
-import java.util.Arrays;
-
-public class ArraysTask0502and0503 {
+public class ArraysTask0502_3 {
     public static void main(String[] args) {
         System.out.println("Playing around");
         //    to create an array you have to declare it
