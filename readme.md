@@ -1,2 +1,2 @@
 #Training project
-Online course java study
+Online courses, books and lessons
