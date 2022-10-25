@@ -4,7 +4,7 @@ public class HexadecimalDecimal {
     private static final String HEX = "0123456789abcdef";
 
     public static void main(String[] args) {
-        int decimalNumber = 1256;
+        int decimalNumber = 16;
         System.out.println("Десятичное число " + decimalNumber + " равно шестнадцатеричному числу " + toHex(decimalNumber));
         String hexNumber = "4e8";
         System.out.println("Шестнадцатеричное число " + hexNumber + " равно десятичному числу " + toDecimal(hexNumber));
