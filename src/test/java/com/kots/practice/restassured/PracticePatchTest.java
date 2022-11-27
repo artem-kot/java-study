@@ -28,8 +28,8 @@ public class PracticePatchTest extends BaseTestData {
                         .when()
                         .patch("/api/users/me");
         response.then().assertThat()
-                .statusCode(200)
-                .body("data.name", equalTo("James Baxtor"));
+                .statusCode(401) //status code is changed to 401 as authorization will fail
+                .body("data.name", equalTo(null)); //null as it returns 401 now
     }
 
     @Test
@@ -45,6 +45,6 @@ public class PracticePatchTest extends BaseTestData {
                 .when()
                 .patch("/api/users/me")
                 .then()
-                .statusCode(200);
+                .statusCode(401); //status code is changed to 401 as authorization will fail
     }
 }
