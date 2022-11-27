@@ -13,9 +13,8 @@ public class BinaryDecimal {
             return "";
         }
         String binaryNumber = "";
-        int sum = 0;
         while(decimalNumber != 0){
-            binaryNumber = (decimalNumber % 2 + binaryNumber);
+            binaryNumber = decimalNumber % 2 + binaryNumber;
             decimalNumber /= 2;
         }
         return binaryNumber;
