@@ -2,6 +2,7 @@ package com.kots.practice.javarush;
 
 public class PlayaroundClass {
     public static void main(String[] args) {
-        System.out.println(0.0/0.0);
+        int multiplier = (int) (1 + Math.random() * 1000);
+        System.out.println("Факт " + (int) ((1 + Math.random()) * multiplier) + ":\n");
     }
 }
