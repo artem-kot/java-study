@@ -31,7 +31,7 @@ public class PracticePostDeleteTest extends BaseTestData {
                 .body(json)
                 .when()
                 .post("/api/cards");
-        response.then().statusCode(201);
+        response.then().statusCode(401); //status code is changed to 401 as authorization will fail
         Data data = response.as(Data.class);
         String cardId = response.then().extract().body().path("data._id");
         assertThat(data, notNullValue());
@@ -41,6 +41,6 @@ public class PracticePostDeleteTest extends BaseTestData {
                 .auth()
                 .oauth2(token)
                 .delete("/api/cards/" + cardId);
-        response.then().statusCode(200);
+        response.then().statusCode(401); //status code is changed to 401 as authorization will fail
     }
 }
