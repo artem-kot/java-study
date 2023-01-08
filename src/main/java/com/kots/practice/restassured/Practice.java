@@ -5,13 +5,13 @@ import com.google.gson.Gson;
 
 public class Practice {
     public static void main(String[] args) {
-        // serialization
+        // serialization - object -> json
         Gson serGson = new GsonBuilder().setPrettyPrinting().create();
         Card card = new Card("Интересное место", "https://code.s3.yandex.net/qa-automation-engineer/java/files/paid-track/sprint1/photoSelenide.jpg");
         String json = serGson.toJson(card);
         System.out.println(json);
 
-        //deserialization
+        //deserialization - json -> object
         Gson desGson = new Gson();
         String jsonString = json;
         Card jsonCard = desGson.fromJson(jsonString, Card.class);
