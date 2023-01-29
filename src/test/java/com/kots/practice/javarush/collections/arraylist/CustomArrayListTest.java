@@ -3,7 +3,7 @@ package com.kots.practice.javarush.collections.arraylist;
 import org.apache.commons.lang3.RandomUtils;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CustomArrayListTest {
 

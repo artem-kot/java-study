@@ -1,5 +1,6 @@
 package com.kots.practice.javarush.random;
-import  java.util.Random;
+
+import java.util.Random;
 
 /**
  * There is an awesome class called Random, which contains a set of awesome methods.
@@ -12,15 +13,14 @@ import  java.util.Random;
  * .nextBytes(byte[] data) doesn't return anything, but fills argument array data with random byte values.
  * .nextGuassian() returns same as .nextDouble(), but according to a normal distribution rule. Number near 0.5 will
  * appear more frequently.
- *
  */
 public class RandomClassMethods {
     public static void main(String[] args) {
         //let's return random numbers from range 25-50.
-        for(int i = 100; i > 0; i--){
+        for (int i = 100; i > 0; i--) {
             Random r = new Random();
-            int number = r.nextInt(26)+25;
-            if(number <= 25 || number >= 50){
+            int number = r.nextInt(26) + 25;
+            if (number <= 25 || number >= 50) {
                 System.out.println(number);
             }
         }

@@ -8,21 +8,21 @@ public class MethodsTask0609 {
          */
         System.out.println(cube(2));
         System.out.println(ninthDegree(2));
-        System.out.println(stepen(2,9));
+        System.out.println(stepen(2, 9));
 
     }
 
-    public static long cube(long a){
-        return a*a*a;
+    public static long cube(long a) {
+        return a * a * a;
     }
 
-    public static long ninthDegree(long a){
+    public static long ninthDegree(long a) {
         return cube(cube(a));
     }
 
-    public static long stepen(long a, int degree){
+    public static long stepen(long a, int degree) {
         long b = a;
-        for(int i = 1; i < degree; i++){
+        for (int i = 1; i < degree; i++) {
             b = b * a;
         }
         return b;

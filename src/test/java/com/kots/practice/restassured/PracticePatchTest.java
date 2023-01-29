@@ -1,16 +1,15 @@
 package com.kots.practice.restassured;
 
 import com.kots.practice.restassured.json.Profile;
-
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.equalTo;
-
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.Test;
 
 import java.io.File;
+
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
 public class PracticePatchTest extends BaseTestData {
 

@@ -18,7 +18,7 @@ public class Swap {
      * Then swap your input variables in 3 assignment operations.
      * Note! This is the most economic and cheap in terms of memory solution to this challenge.
      */
-    public String swapViaBuffer(int a, int b){
+    public String swapViaBuffer(int a, int b) {
         System.out.println(a + ", " + b);
         int c = a;
         a = b;
@@ -32,7 +32,7 @@ public class Swap {
      * You can also use arithmetic. Adding and substracting or multiplying and dividing. Whatever suits you.
      * Note! This solution costs the most in terms of memory, because it involves many math and assignment operations.
      */
-    public String swapViaArithmetic(int a, int b){
+    public String swapViaArithmetic(int a, int b) {
         System.out.println(a + ", " + b);
         a = a + b;
         b = a - b;
@@ -48,7 +48,7 @@ public class Swap {
      * you expect them to be executed.
      * However, bitwise swap can be used to not only swap numbers, but any type of data.
      */
-    public String swapBitwise(int a, int b){
+    public String swapBitwise(int a, int b) {
         System.out.println(a + ", " + b);
         a = a ^ b;
         b = a ^ b;

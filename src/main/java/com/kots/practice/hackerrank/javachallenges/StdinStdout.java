@@ -1,12 +1,12 @@
 /**
  * Stdin vs stdout challenge (standard input and standard output)
- *
+ * <p>
  * Task
  * In this challenge, you must read 3 integers from stdin and then print them to stdout.
  * Each integer must be printed on a new line.
  * Input Format
  * There are  lines of input, and each line contains a single integer.
- *
+ * <p>
  * Note
  * If you use the nextLine() method immediately following the nextInt() method,
  * recall that nextInt() reads integer tokens;

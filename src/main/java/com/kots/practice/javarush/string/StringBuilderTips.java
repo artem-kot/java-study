@@ -29,7 +29,7 @@ public class StringBuilderTips {
         System.out.println(string);
         string.deleteCharAt(6);
         System.out.println(string);
-        string.replace(4,8, "blabla");
+        string.replace(4, 8, "blabla");
         System.out.println(string);
     }
 }

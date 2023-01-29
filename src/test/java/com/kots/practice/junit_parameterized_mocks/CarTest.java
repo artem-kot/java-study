@@ -1,11 +1,12 @@
 package com.kots.practice.junit_parameterized_mocks;
 
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-import io.qameta.allure.junit4.DisplayName;
+
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -39,7 +40,7 @@ public class CarTest {
     @DisplayName("Advanced test with a stub")
     public void carWheelsCountTest() {
         Car car = new Car(wheelsStub);
-        Mockito.when(wheelsStub.wheelsCount(2,2)).thenReturn(5);
-        assertEquals(5, car.getWheelsCount(2,2));
+        Mockito.when(wheelsStub.wheelsCount(2, 2)).thenReturn(5);
+        assertEquals(5, car.getWheelsCount(2, 2));
     }
 }

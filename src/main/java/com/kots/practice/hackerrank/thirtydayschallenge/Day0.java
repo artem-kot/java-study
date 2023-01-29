@@ -13,9 +13,10 @@ public class Day0 {
      * Then we store this input in a separate variable.
      * Then we close scanner as no other inputs are expected to be received.
      * And printing the results in console.
+     *
      * @param args
      */
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String inputString = scanner.nextLine();
         scanner.close();

@@ -7,12 +7,11 @@ package com.kots.practice.javarush.arrays;
  * Each such 2nd level container contains Y links to memory blocks with actual variables values.
  * Thus, we have Type[][] array = new Type[X][Y];
  * Or Type[][] array = {
- *     {x1y1, x1y2, x1y3, ... , xnyn},
- *     {x2y1, x2y2, x2y3, ... , xnyn}
+ * {x1y1, x1y2, x1y3, ... , xnyn},
+ * {x2y1, x2y2, x2y3, ... , xnyn}
  * };
- *
+ * <p>
  * More here: https://javarush.ru/en/quests/lectures/questsyntaxpro.level05.lecture04
- *
  */
 
 public class ArraysTask0509_Multidimensional {
@@ -28,9 +27,9 @@ public class ArraysTask0509_Multidimensional {
 
         int[][] table = new int[10][10];
 
-        for(int i = 0; i < 10; i++){
-            for(int j = 0; j < 10; j++){
-                table[i][j] = (i+1)*(j+1);
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                table[i][j] = (i + 1) * (j + 1);
                 System.out.print(table[i][j] + " ");
             }
             System.out.println();

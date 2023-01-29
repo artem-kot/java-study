@@ -16,7 +16,6 @@ package com.kots.practice.javarush.collections.arraylist;
 //•	Если в метод paySalary(String) передается null, метод не должен добавлять это значение в waitingEmployees или alreadyGotSalaryEmployees.
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ArrayListTask1209 {
     public static ArrayList<String> waitingEmployees = new ArrayList<>();
@@ -36,17 +35,17 @@ public class ArrayListTask1209 {
         initEmployees();
         paySalary("Фриле");
 
-        for(String employee : waitingEmployees){
+        for (String employee : waitingEmployees) {
             System.out.println(employee);
         }
         System.out.println("-=====-");
-        for(String employee : alreadyGotSalaryEmployees){
+        for (String employee : alreadyGotSalaryEmployees) {
             System.out.println(employee);
         }
     }
 
     public static void paySalary(String name) {
-        if(waitingEmployees.contains(name)){
+        if (waitingEmployees.contains(name)) {
             alreadyGotSalaryEmployees.add(name);
             waitingEmployees.set(waitingEmployees.indexOf(name), null);
         }

@@ -23,7 +23,7 @@ public class ArraysTask0516_17_fill_copyOf {
         int valueStart = 10;
         int valueEnd = 13;
 
-        if(array.length % 2 == 0){
+        if (array.length % 2 == 0) {
             Arrays.fill(array, 0, array.length / 2, valueStart);
             Arrays.fill(array, array.length / 2, array.length, valueEnd);
         } else {
@@ -52,12 +52,12 @@ public class ArraysTask0516_17_fill_copyOf {
         int[] sampleArray = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
         int half = sampleArray.length / 2;
 
-        if(sampleArray.length % 2 == 0) {
+        if (sampleArray.length % 2 == 0) {
             result[0] = Arrays.copyOfRange(sampleArray, 0, half);
             result[1] = Arrays.copyOfRange(sampleArray, half, sampleArray.length);
         } else {
-            result[0] = Arrays.copyOfRange(sampleArray, 0, half+1);
-            result[1] = Arrays.copyOfRange(sampleArray, half+1, sampleArray.length);
+            result[0] = Arrays.copyOfRange(sampleArray, 0, half + 1);
+            result[1] = Arrays.copyOfRange(sampleArray, half + 1, sampleArray.length);
         }
 
         System.out.println(Arrays.deepToString(result));

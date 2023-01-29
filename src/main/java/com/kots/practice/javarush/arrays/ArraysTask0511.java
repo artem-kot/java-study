@@ -1,5 +1,7 @@
 package com.kots.practice.javarush.arrays;
+
 import java.util.Scanner;
+
 public class ArraysTask0511 {
     public static void main(String[] args) {
         System.out.println("Task 0511");
@@ -14,7 +16,7 @@ public class ArraysTask0511 {
 
         Scanner input = new Scanner(System.in);
         int[][] multiArray = new int[input.nextInt()][];
-        for(int i = 0; i < multiArray.length; i++){
+        for (int i = 0; i < multiArray.length; i++) {
             multiArray[i] = new int[input.nextInt()];
         }
     }

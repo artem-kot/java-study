@@ -5,16 +5,16 @@ public class Car {
     CarEngine carEngine;
     CarWheels carWheels;
 
-    public void setCarBrand(String carBrand) {
-        this.carBrand = carBrand;
-    }
-
     public Car(CarEngine carEngine) {
         this.carEngine = carEngine;
     }
 
     public Car(CarWheels carWheels) {
         this.carWheels = carWheels;
+    }
+
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
     }
 
     public int getEnginePower() {

@@ -2,8 +2,6 @@ package com.kots.practice.javarush.arrays;
 
 import java.util.Scanner;
 
-import static org.apache.commons.lang3.StringUtils.equalsIgnoreCase;
-
 /**
  * Here we will work with Strings.
  * Please, note that when we are talking about String[] array, we're not talking about an array with actual string
@@ -14,7 +12,7 @@ import static org.apache.commons.lang3.StringUtils.equalsIgnoreCase;
  * In other words, 2 similar values ("Java") are stored in 2 different memory blocks. And by comparing str[0] == str[1]
  * we compare not the values, but the links to memory blocks instead.
  * More: https://javarush.ru/quests/lectures/questsyntaxpro.level05.lecture03
- *
+ * <p>
  * If you want to compare the values, use equals() and equalsIgnoreCase() methods.
  */
 public class ArraysTask0508_String {
@@ -25,25 +23,25 @@ public class ArraysTask0508_String {
 
         Scanner input = new Scanner(System.in);
         String[] array = new String[6];
-        for(int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             array[i] = input.nextLine();
         }
 
         String[] arrayModified = new String[array.length];
-        for(int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             arrayModified[i] = array[i];
         }
 
-        for(int i = 0; i < array.length; i++){
-           for(int j = i+1; j < array.length; j++){
-               if(array[i].equalsIgnoreCase(array[j])){
-                   arrayModified[j] = null;
-                   arrayModified[i] = null;
-               }
-           }
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i].equalsIgnoreCase(array[j])) {
+                    arrayModified[j] = null;
+                    arrayModified[i] = null;
+                }
+            }
         }
 
-        for(int i = 0; i < arrayModified.length; i++){
+        for (int i = 0; i < arrayModified.length; i++) {
             System.out.println(arrayModified[i]);
         }
 

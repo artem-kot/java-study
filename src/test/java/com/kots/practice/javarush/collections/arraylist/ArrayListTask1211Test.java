@@ -5,15 +5,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ArrayListTask1211Test {
 
     private static final ArrayList<Integer> numbers = new ArrayList<>();
-    private ArrayList<Integer> getTestData(){
-        for(int i = 0; i < 10; i++) {
+
+    private ArrayList<Integer> getTestData() {
+        for (int i = 0; i < 10; i++) {
             numbers.add(i, RandomUtils.nextInt(0, 100));
         }
         numbers.set(RandomUtils.nextInt(1, 11), -100);

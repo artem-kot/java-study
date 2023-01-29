@@ -4,11 +4,12 @@
 
 package com.kots.practice.junit_parameterized_mocks;
 
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import io.qameta.allure.junit4.DisplayName;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class CalculatorTest {
@@ -24,16 +25,17 @@ public class CalculatorTest {
 
     @Parameterized.Parameters
     public static Object[] getTestData() {
-        return new Object[][] {
-                {-6,-1,-7},
-                {-1,0,-1},
-                {0,0,0},
-                {-1,1,0},
-                {-1,2,1},
-                {1,1,2},
-                {3,-2,1}
+        return new Object[][]{
+                {-6, -1, -7},
+                {-1, 0, -1},
+                {0, 0, 0},
+                {-1, 1, 0},
+                {-1, 2, 1},
+                {1, 1, 2},
+                {3, -2, 1}
         };
     }
+
     @Test
     @DisplayName("Simple calculator test")
     public void calTest() {

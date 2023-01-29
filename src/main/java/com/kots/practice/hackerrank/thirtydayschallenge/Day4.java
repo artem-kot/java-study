@@ -11,11 +11,11 @@
  * If age <13, print "You are young.".
  * If age >=13 and <18, print "You are a teenager.".
  * Otherwise, print "You are old.".
- *
+ * <p>
  * Input Format
  * The first line contains an integer, T (the number of test cases), and the T subsequent lines
  * each contain an integer denoting the age of a Person instance.
- *
+ * <p>
  * Constraints
  * 1<=T<=4
  * -5<=age<=30
@@ -37,25 +37,7 @@ public class Day4 {
         }
     }
 
-    public String amIOld() {
-        if (age < 13) {
-            return "You are young.";
-        } else if (age <18) {
-            return "You are a teenager.";
-        } else {
-            return "You are old.";
-        }
-    }
-
-    public int yearPasses() {
-        return age++;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int T = scanner.nextInt();
         for (int i = 0; i < T; i++) {
@@ -69,5 +51,23 @@ public class Day4 {
             System.out.println();
         }
         scanner.close();
+    }
+
+    public String amIOld() {
+        if (age < 13) {
+            return "You are young.";
+        } else if (age < 18) {
+            return "You are a teenager.";
+        } else {
+            return "You are old.";
+        }
+    }
+
+    public int yearPasses() {
+        return age++;
+    }
+
+    public int getAge() {
+        return age;
     }
 }

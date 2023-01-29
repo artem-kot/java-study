@@ -14,21 +14,21 @@ public class ArraysTask0506_7 {
         System.out.println("How many numbers do you want to check?");
         int n = console.nextInt();
 
-        if(n > 0){
+        if (n > 0) {
             int[] array = new int[n];
 
             System.out.println("Please, enter " + n + " numbers. Hit enter after each one.");
-            for(int i = 0; i < array.length; i++){
+            for (int i = 0; i < array.length; i++) {
                 array[i] = console.nextInt();
             }
 
             int min = array[0];
             int max = array[0];
 
-            for(int i = 0; i < array.length; i++){
-                if(min > array[i]){
+            for (int i = 0; i < array.length; i++) {
+                if (min > array[i]) {
                     min = array[i];
-                } else if(max < array[i]){
+                } else if (max < array[i]) {
                     max = array[i];
                 }
             }

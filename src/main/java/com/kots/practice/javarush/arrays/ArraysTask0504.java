@@ -1,7 +1,5 @@
 package com.kots.practice.javarush.arrays;
 
-import com.google.gson.internal.bind.util.ISO8601Utils;
-
 public class ArraysTask0504 {
     public static void main(String[] args) {
         System.out.println("Playing around");
@@ -24,16 +22,16 @@ public class ArraysTask0504 {
 
         resultArray = new int[firstArray.length + secondArray.length];
 
-        for(int i=0; i<firstArray.length+secondArray.length; i++){
-            if(i < firstArray.length){
+        for (int i = 0; i < firstArray.length + secondArray.length; i++) {
+            if (i < firstArray.length) {
                 resultArray[i] = firstArray[i];
             } else {
-                resultArray[i] = secondArray[i-firstArray.length];
+                resultArray[i] = secondArray[i - firstArray.length];
             }
         }
 
         System.out.print("| ");
-        for(int i=0; i<resultArray.length; i++){
+        for (int i = 0; i < resultArray.length; i++) {
             System.out.print(resultArray[i] + " | ");
         }
         System.out.println();

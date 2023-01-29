@@ -24,8 +24,8 @@ public class Day7 {
         bufferedReader.close();
 
         int[] array = new int[n];
-        for(int i = arr.size(); i > 0; i--){
-            array[arr.size()-i] = arr.get(i-1);
+        for (int i = arr.size(); i > 0; i--) {
+            array[arr.size() - i] = arr.get(i - 1);
         }
         System.out.println(arr);
         System.out.println(arr.size());

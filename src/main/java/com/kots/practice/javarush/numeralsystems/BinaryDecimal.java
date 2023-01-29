@@ -9,11 +9,11 @@ public class BinaryDecimal {
     }
 
     public static String toBinary(int decimalNumber) {
-        if(decimalNumber <= 0){
+        if (decimalNumber <= 0) {
             return "";
         }
         String binaryNumber = "";
-        while(decimalNumber != 0){
+        while (decimalNumber != 0) {
             binaryNumber = decimalNumber % 2 + binaryNumber;
             decimalNumber /= 2;
         }
@@ -22,12 +22,12 @@ public class BinaryDecimal {
 
     public static int toDecimal(String binaryNumber) {
         int decimalNumber = 0;
-        if(binaryNumber == null || binaryNumber.equals("")){
+        if (binaryNumber == null || binaryNumber.equals("")) {
             return decimalNumber;
         }
         int biDigit = 0;
-        for(int i = 0; i < binaryNumber.length(); i++){
-            biDigit = Character.getNumericValue(binaryNumber.charAt(binaryNumber.length()-i-1));
+        for (int i = 0; i < binaryNumber.length(); i++) {
+            biDigit = Character.getNumericValue(binaryNumber.charAt(binaryNumber.length() - i - 1));
             decimalNumber = (int) (decimalNumber + biDigit * Math.pow(2, i));
         }
         return decimalNumber;

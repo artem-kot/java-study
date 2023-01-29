@@ -28,19 +28,19 @@ public class ArraysTask0505 {
         int n = console.nextInt();
         int[] array;
 
-        if(n > 0) {
+        if (n > 0) {
             array = new int[n];
-            for(int i = 0; i < n; i++){
+            for (int i = 0; i < n; i++) {
                 array[i] = console.nextInt();
             }
             System.out.println();
-            if(n % 2 == 0) {
+            if (n % 2 == 0) {
                 for (int i = array.length - 1; i >= 0; i--) {
                     System.out.print(array[i] + " | ");
                 }
                 System.out.println();
             } else {
-                for(int i = 0; i < array.length; i++){
+                for (int i = 0; i < array.length; i++) {
                     System.out.print(array[i] + " | ");
                 }
             }

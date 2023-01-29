@@ -3,21 +3,22 @@ package com.kots.practice.hackerrank.javachallenges;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class IfElseChallengeTest {
     private final int n;
     private final String expectedResult;
 
-    public IfElseChallengeTest(int n, String expectedResult){
+    public IfElseChallengeTest(int n, String expectedResult) {
         this.n = n;
         this.expectedResult = expectedResult;
     }
 
     @Parameterized.Parameters
-    public static Object[] getTestData(){
-        return new Object[][] {
+    public static Object[] getTestData() {
+        return new Object[][]{
                 {1, "Weird"},
                 {3, "Weird"},
                 {4, "Not Weird"},
@@ -32,7 +33,7 @@ public class IfElseChallengeTest {
     }
 
     @Test
-    public void IfElseChallengeTest(){
+    public void IfElseChallengeTest() {
         IfElseChallenge sampleObject = new IfElseChallenge();
         String actualResult = sampleObject.challengeMethod(n);
         assertEquals(expectedResult, actualResult);

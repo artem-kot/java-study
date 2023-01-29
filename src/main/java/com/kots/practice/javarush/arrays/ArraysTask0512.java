@@ -17,9 +17,9 @@ public class ArraysTask0512 {
          */
 
         int[][][] multiArray = new int[][][]{{{4, 8, 15}, {16}}, {{23, 42}, {}}, {{1}, {2}, {3}, {4, 5}}};
-        for(int i = 0; i < multiArray.length; i++){
-            for(int j = 0; j < multiArray[i].length; j++){
-                for(int k = 0; k < multiArray[i][j].length; k++){
+        for (int i = 0; i < multiArray.length; i++) {
+            for (int j = 0; j < multiArray[i].length; j++) {
+                for (int k = 0; k < multiArray[i][j].length; k++) {
                     System.out.print(multiArray[i][j][k] + " ");
                 }
             }

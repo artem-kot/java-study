@@ -6,7 +6,7 @@ public class MethodsTask0612 {
         /**
          * Program should return square for each element of an array.
          */
-        int[] array = {15,64,9,51,42};
+        int[] array = {15, 64, 9, 51, 42};
         printSqrt(array);
     }
 

@@ -1,10 +1,10 @@
 /**
  * Day 5 challenge. Loops.
- *
+ * <p>
  * Task
  * Given an integer, n, print its first 10 multiples. Each multiple n*i (where 1<=i<=10)
  * should be printed on a new line in the form: n x i = result.
- *
+ * <p>
  * Constraints
  * 2<=n<=20
  */
@@ -17,8 +17,8 @@ import java.io.InputStreamReader;
 
 public class Day5 {
     public static void multipliersPrint(int n) {
-        for (int i=1; i<11; i++) {
-            System.out.println(n + " x " + i + " = " + n*i);
+        for (int i = 1; i < 11; i++) {
+            System.out.println(n + " x " + i + " = " + n * i);
         }
     }
 

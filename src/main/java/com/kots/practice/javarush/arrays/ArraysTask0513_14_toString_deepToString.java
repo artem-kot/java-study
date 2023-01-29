@@ -6,12 +6,11 @@ import java.util.Arrays;
  * Arrays class and its methods.
  * Java creators soon figured out arrays are very often used by programmers, so they created a special class
  * with default methods to simplify this work. Class is called Arrays in java.util.Arrays.
- *
+ * <p>
  * int[] array = {1, 2, 3};
  * String str = Arrays.toString(array);
- *
+ * <p>
  * But if you have 2-dimensional array, this wouldn't work. You have to use Arrays.deepToString() method for it.
- *
  */
 
 public class ArraysTask0513_14_toString_deepToString {

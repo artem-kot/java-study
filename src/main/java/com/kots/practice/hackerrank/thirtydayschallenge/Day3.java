@@ -1,6 +1,6 @@
 /**
  * Conditional statements challenge
- *
+ * <p>
  * The task is the same as in IfElseChallenge under javachallenges package.
  */
 

@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class Day2Test {
@@ -22,7 +22,7 @@ public class Day2Test {
 
     @Parameterized.Parameters
     public static Object[] getTestData() {
-        return new Object[][] {
+        return new Object[][]{
                 {0, 13, 13, 0},
                 {1, 13, 23, 1},
                 {100, 5, 13, 118},

@@ -7,7 +7,7 @@ package com.kots.practice.hackerrank.thirtydayschallenge;
 import java.util.Scanner;
 
 public class Day1 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int i = 4;
         double d = 4.0;
         String s = "HackerRank ";
@@ -18,8 +18,8 @@ public class Day1 {
         String string = scan.nextLine() + scan.nextLine();
         scan.close();
 
-        System.out.println(i+integerNumber);
-        System.out.println(d+doubleNumber);
-        System.out.println(s+string);
+        System.out.println(i + integerNumber);
+        System.out.println(d + doubleNumber);
+        System.out.println(s + string);
     }
 }

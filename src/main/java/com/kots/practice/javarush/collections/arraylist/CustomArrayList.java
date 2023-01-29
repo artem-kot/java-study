@@ -7,7 +7,7 @@ import java.util.Arrays;
  * words, once we filled the last empty slot of ArrayList), it's potential size (capacity) is automatically increased.
  * It's done via creating a new ArrayList object with capacity = 1.5 of the previous one (e.g. 10 -> 15).
  * This task is intended to visualize it better.
- *
+ * <p>
  * We have to create CustomArrayList class with add() method, which implements logic described above.
  */
 
@@ -32,7 +32,7 @@ public class CustomArrayList {
     }
 
     private void grow() {
-        capacity += capacity/2;
+        capacity += capacity / 2;
         array = Arrays.copyOf(array, capacity);
     }
 }

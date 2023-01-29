@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  * separators.
  * nextToken() will give you next piece of string from StringTokenizer.
  * hasMoreTokens() is a boolean method, which returns true if there is still some tokens left unseparated.
- *
+ * <p>
  * format() is a static method of the String class. It helps to set up a template of combining string with the data
  * String s = String.format("a=%d, b=%d, c=%d", 1, 4, 3); output: "a=1, b=4, c=3"
  * %s - string
@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
  * %c - char
  * %t - Date
  * %% - percent symbol
- *
+ * <p>
  * Besides data type you can also mention data order using %1$d instead of %d. Where 1 - is an order.
  * String s = String.format("a=%3$d, b=%1$d, c=%2$d", 17, 6, 4); output: "a=4, b=17, c=6"
  * When you're doing an output to console, you can simply use System.out.printf("string", parameters) method.
@@ -34,7 +34,7 @@ public class StringFormatter {
         System.out.println(Arrays.toString(arrayOfStrings));
 
         StringTokenizer tokenizer = new StringTokenizer(string, "!");
-        while(tokenizer.hasMoreTokens()){
+        while (tokenizer.hasMoreTokens()) {
             System.out.print(tokenizer.nextToken() + " and");
         }
         System.out.println();

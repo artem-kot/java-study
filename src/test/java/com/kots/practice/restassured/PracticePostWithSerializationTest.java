@@ -1,14 +1,14 @@
 package com.kots.practice.restassured;
 
 import com.kots.practice.restassured.json.Card;
-import static io.restassured.RestAssured.*;
-
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.Test;
 
-public class PracticePostWithSerializationTest extends BaseTestData{
+import static io.restassured.RestAssured.given;
+
+public class PracticePostWithSerializationTest extends BaseTestData {
 
     @Test
     @DisplayName("POST create new card: /api/cards using serialization")

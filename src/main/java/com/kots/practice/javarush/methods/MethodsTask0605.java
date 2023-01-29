@@ -17,10 +17,10 @@ public class MethodsTask0605 {
 
     public static void reverseArray(int[] array) {
         int[] temp = Arrays.copyOf(array, array.length);
-        for(int i = array.length-1; i >= 0; i--){
-            temp[array.length-1-i] = array[i];
+        for (int i = array.length - 1; i >= 0; i--) {
+            temp[array.length - 1 - i] = array[i];
         }
-        for(int i = 0; i < temp.length; i++){
+        for (int i = 0; i < temp.length; i++) {
             array[i] = temp[i];
         }
         printArray(array);

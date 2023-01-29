@@ -2,13 +2,14 @@ package com.kots.practice.restassured;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.Test;
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.CoreMatchers.equalTo;
-import io.qameta.allure.junit4.DisplayName;
 
-public class PracticeGetTest extends BaseTestData{
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
+
+public class PracticeGetTest extends BaseTestData {
 
     @Test
     @DisplayName("GET user info: /api/users/me")
@@ -58,11 +59,11 @@ public class PracticeGetTest extends BaseTestData{
 
     @Step("Compare user name to ER")
     public void compareUserNameToText(Response response, String username) {
-        response.then().assertThat().body("data.name",equalTo(null)); //didn't use username argument as call returns 401
+        response.then().assertThat().body("data.name", equalTo(null)); //didn't use username argument as call returns 401
     }
 
     @Step("Print response body to console")
-    public void printResponseBodyToConsole(Response response){
+    public void printResponseBodyToConsole(Response response) {
         System.out.println(response.body().asString());
     }
 

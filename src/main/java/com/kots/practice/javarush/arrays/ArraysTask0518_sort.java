@@ -5,7 +5,6 @@ import java.util.Arrays;
 /**
  * Arrays.sort(array) will automatically sort array in ascending order.
  * Arrays.sort(array, start, end) will sort a cut of array from start to end (not including) index.
- *
  */
 
 public class ArraysTask0518_sort {

@@ -12,10 +12,10 @@ public class HexadecimalDecimal {
 
     public static String toHex(int decimalNumber) {
         String hexadecimalNumber = "";
-        if(decimalNumber <= 0){
+        if (decimalNumber <= 0) {
             return "";
         }
-        while(decimalNumber != 0){
+        while (decimalNumber != 0) {
             hexadecimalNumber = HEX.charAt(decimalNumber % 16) + hexadecimalNumber;
             decimalNumber /= 16;
         }
@@ -24,10 +24,10 @@ public class HexadecimalDecimal {
 
     public static int toDecimal(String hexNumber) {
         int decimalNumber = 0;
-        if(hexNumber == null || hexNumber.equals("")){
+        if (hexNumber == null || hexNumber.equals("")) {
             return 0;
         }
-        for (int i = 0; i < hexNumber.length(); i++){
+        for (int i = 0; i < hexNumber.length(); i++) {
             int index = HEX.indexOf(hexNumber.charAt(i));
             decimalNumber = decimalNumber * 16 + index;
         }

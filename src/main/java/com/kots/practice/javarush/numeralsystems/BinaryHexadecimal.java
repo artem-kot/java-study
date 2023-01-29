@@ -23,41 +23,44 @@ public class BinaryHexadecimal {
      * We have to:
      * 1. Validate input.
      * If it's null / empty / out of range string, we should return empty string.
-     *  1.1 How to validate whether some symbols of the string are out of the range for hexadecimal numeric system?
-     *  Let's create an array of its symbols and use array methods.
+     * 1.1 How to validate whether some symbols of the string are out of the range for hexadecimal numeric system?
+     * Let's create an array of its symbols and use array methods.
      * 2. Deal with bi-to-hex first.
-     *  2.1 check the line length and add number of zeroes to make the length a multiple of four.
-     *  2.2 Check each 4 symbols and align them by index with HEX array.
+     * 2.1 check the line length and add number of zeroes to make the length a multiple of four.
+     * 2.2 Check each 4 symbols and align them by index with HEX array.
      */
 
-    public String adjustBiString(String binaryNumber){
-        for(int i = 0; i < binaryNumber.length() % 4; i++){
+    public String adjustBiString(String binaryNumber) {
+        for (int i = 0; i < binaryNumber.length() % 4; i++) {
             binaryNumber = "0" + binaryNumber;
-        } return binaryNumber;
+        }
+        return binaryNumber;
     }
 
-    public String convertToHex(String binaryNumber){
+    public String convertToHex(String binaryNumber) {
         String hexNumber = "";
-        for(int i = 0; i < binaryNumber.length(); i+=4){
-            String digit = binaryNumber.substring(i, i+4);
+        for (int i = 0; i < binaryNumber.length(); i += 4) {
+            String digit = binaryNumber.substring(i, i + 4);
             hexNumber += String.valueOf(HEX[Arrays.binarySearch(BIHEX, digit)]);
-        } return hexNumber;
+        }
+        return hexNumber;
     }
 
-    public String convertToBinary(String hexNumber){
+    public String convertToBinary(String hexNumber) {
         String binaryNumber = "";
-        for(int i = 0; i < hexNumber.length(); i++){
+        for (int i = 0; i < hexNumber.length(); i++) {
             binaryNumber += BIHEX[Arrays.binarySearch(HEX, hexNumber.charAt(i))];
-        } return binaryNumber;
+        }
+        return binaryNumber;
     }
 
-    public boolean isHexValid(String number){
+    public boolean isHexValid(String number) {
         boolean numberValidity = true;
-        if(number == null || number.equals("")){
+        if (number == null || number.equals("")) {
             numberValidity = false;
         } else {
             boolean digitValidity = false;
-            for(int i = 0; i < number.length(); i++){
+            for (int i = 0; i < number.length(); i++) {
                 int validityCounter = 0;
                 for (char c : HEX) {
                     if (number.charAt(i) == c) {
@@ -65,28 +68,30 @@ public class BinaryHexadecimal {
                         validityCounter++;
                     }
                 }
-                if(validityCounter == 0){
+                if (validityCounter == 0) {
                     numberValidity = false;
                 }
             }
-        } return numberValidity;
+        }
+        return numberValidity;
     }
 
-    public boolean isBinaryValid(String number){
+    public boolean isBinaryValid(String number) {
         boolean numberValidity = true;
-        if(number == null || number.equals("")){
+        if (number == null || number.equals("")) {
             numberValidity = false;
         } else {
-            for(int i = 0; i < number.length(); i++){
-                if(number.charAt(i) != '0' && number.charAt(i) != '1'){
+            for (int i = 0; i < number.length(); i++) {
+                if (number.charAt(i) != '0' && number.charAt(i) != '1') {
                     numberValidity = false;
                 }
             }
-        } return numberValidity;
+        }
+        return numberValidity;
     }
 
     public String toHex(String binaryNumber) {
-        if(isBinaryValid(binaryNumber)){
+        if (isBinaryValid(binaryNumber)) {
             return convertToHex(adjustBiString(binaryNumber));
         } else {
             return "";
@@ -94,7 +99,7 @@ public class BinaryHexadecimal {
     }
 
     public String toBinary(String hexNumber) {
-        if(isHexValid(hexNumber)){
+        if (isHexValid(hexNumber)) {
             return convertToBinary(hexNumber);
         } else {
             return "";

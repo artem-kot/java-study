@@ -1,7 +1,8 @@
 package com.kots.practice.restassured;
+
+import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.kots.practice.restassured.json.Card;
-import com.google.gson.Gson;
 
 public class Practice {
     public static void main(String[] args) {

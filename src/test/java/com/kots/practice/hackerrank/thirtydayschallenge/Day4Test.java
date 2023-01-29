@@ -5,7 +5,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 @RunWith(Parameterized.class)
 public class Day4Test {
@@ -21,7 +22,7 @@ public class Day4Test {
 
     @Parameterized.Parameters
     public static Object[] getTestData() {
-        return new Object[][] {
+        return new Object[][]{
                 {-6, "You are young.", 1},
                 {12, "You are young.", 13},
                 {13, "You are a teenager.", 14},

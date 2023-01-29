@@ -18,10 +18,10 @@ public class Day6Test {
 
     @Parameterized.Parameters
     public static Object[] getTestData() {
-        return new Object[][] {
-            {"0123456789", "02468 13579"},
-            {"This is sample input string", "Ti ssml nu tig hsi apeiptsrn"},
-            {"WBee ralrien  giositn gs ethor  Bteeruleirn!!", "We are going to Berlin! Berlin ist sehr teuer!"}
+        return new Object[][]{
+                {"0123456789", "02468 13579"},
+                {"This is sample input string", "Ti ssml nu tig hsi apeiptsrn"},
+                {"WBee ralrien  giositn gs ethor  Bteeruleirn!!", "We are going to Berlin! Berlin ist sehr teuer!"}
         };
     }
 
