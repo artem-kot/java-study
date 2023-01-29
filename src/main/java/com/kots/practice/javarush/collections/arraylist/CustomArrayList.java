@@ -31,6 +31,19 @@ public class CustomArrayList {
         size++;
     }
 
+    public void add(int index, int number) {
+        if (size == capacity) {
+            grow();
+        }
+        array = Arrays.copyOf(array, size + 1);
+        Integer[] temp = Arrays.copyOfRange(array, index, array.length);
+        for (int i = index; i < array.length - 1; i++) {
+            array[i+1] = temp[i - index];
+        }
+        array[index] = number;
+        size++;
+    }
+
     private void grow() {
         capacity += capacity / 2;
         array = Arrays.copyOf(array, capacity);
