@@ -31,8 +31,9 @@ public class PlaygroundMapCaching {
     }
 
     private static void updateDialog(String userId, ArrayList<String> input) {
-        if (dialogs.get(userId).size() >= 8) {
-            for (int i = dialogs.get(userId).size() - 8 + input.size(); i >= 0; i--) {
+        int limit = 8;
+        if (dialogs.get(userId).size() >= limit) {
+            for (int i = dialogs.get(userId).size() - limit + input.size(); i >= 0; i--) {
                 dialogs.get(userId).remove(0);
             }
         }
@@ -51,7 +52,13 @@ public class PlaygroundMapCaching {
         dialog.logMessage("1", "Artem", "ping 5", "pong 5");
 
         Gson serGson = new GsonBuilder().setPrettyPrinting().create();
-        String json = serGson.toJson(dialogs);
-        System.out.println(json);
+//        String json = serGson.toJson(dialogs);
+//        System.out.println(json);
+
+        String message = "{\"+4917667898175\":\"accept\"}\n";
+        Gson gson = new Gson();
+        Map json = gson.fromJson(message, Map.class);
+        System.out.println(json.entrySet());
+        System.out.println(json.keySet().toArray()[0]);
     }
 }
