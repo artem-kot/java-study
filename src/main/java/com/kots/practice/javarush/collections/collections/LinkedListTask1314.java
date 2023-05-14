@@ -18,40 +18,42 @@ public class LinkedListTask1314 {
         }
     }
 
-//    public void add(String value) {
-//        Node node = new Node();
-//        if (first.next == null) {
-//            first.next = last;
-//            node.prev = last;
-//            last.value = value;
-//            last = node;
-//        } else {
-//            node.prev = last;
-//            last.prev.next = last;
-//            last.value = value;
-//            last = node;
-//        }
-//    }
-
+//    My add() method below
     public void add(String value) {
-        if (first.next == null) {
-            Node node = new Node();
-            node.value = value;
-            first.next = node;
-        }
-        if (last.prev == null) {
-            last.prev = first.next;
-            return;
-        }
-
         Node node = new Node();
-        node.value = value;
-
-        Node lastNode = last.prev;
-        lastNode.next = node;
-        node.prev = lastNode;
-        last.prev = node;
+        if (first.next == null) {
+            first.next = last;
+            node.prev = last;
+            last.value = value;
+            last = node;
+        } else {
+            node.prev = last;
+            last.prev.next = last;
+            last.value = value;
+            last = node;
+        }
     }
+
+//    Javarush's add() method below
+//    public void add(String value) {
+//        if (first.next == null) {
+//            Node node = new Node();
+//            node.value = value;
+//            first.next = node;
+//        }
+//        if (last.prev == null) {
+//            last.prev = first.next;
+//            return;
+//        }
+//
+//        Node node = new Node();
+//        node.value = value;
+//
+//        Node lastNode = last.prev;
+//        lastNode.next = node;
+//        node.prev = lastNode;
+//        last.prev = node;
+//    }
 
 //    edge cases: index -1, index 0, index 1
     public String get(int index) {
@@ -60,6 +62,7 @@ public class LinkedListTask1314 {
             node = node.next;
             index--;
         }
+
         return index != 0 ? null : node.value;
     }
 
