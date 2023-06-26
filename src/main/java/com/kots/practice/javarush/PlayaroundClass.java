@@ -1,32 +1,11 @@
 package com.kots.practice.javarush;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 public class PlayaroundClass {
 
     public static ArrayList<String> utterances = new ArrayList<>();
 
-    private int maxSize() {
-        return 5;
-    }
-
-    public void add3(String response) {
-        addResponse(response);
-        addResponse(response);
-        addResponse(response);
-    }
-
-    public void addResponse(String response) {
-        if (utterances.size() < maxSize()) {
-            utterances.add(response);
-        } else {
-            utterances.remove(0);
-            addResponse(response);
-        }
-    }
     public static void main(String[] args) {
         var test = new PlayaroundClass();
         System.out.println(utterances.size());
@@ -60,6 +39,24 @@ public class PlayaroundClass {
 //        }
 
 
+    }
 
+    private int maxSize() {
+        return 5;
+    }
+
+    public void add3(String response) {
+        addResponse(response);
+        addResponse(response);
+        addResponse(response);
+    }
+
+    public void addResponse(String response) {
+        if (utterances.size() < maxSize()) {
+            utterances.add(response);
+        } else {
+            utterances.remove(0);
+            addResponse(response);
+        }
     }
 }

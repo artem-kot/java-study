@@ -14,7 +14,8 @@ public class ThreadSampleArgumentHenEgg2 {
         if (eggArgument.isAlive()) {
             try {
                 eggArgument.join();
-            } catch (InterruptedException ignored) {}
+            } catch (InterruptedException ignored) {
+            }
             System.out.println("Egg won!");
         } else {
             System.out.println("Hen won!");

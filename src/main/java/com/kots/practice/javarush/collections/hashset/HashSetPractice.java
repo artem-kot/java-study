@@ -10,7 +10,6 @@ package com.kots.practice.javarush.collections.hashset;
     Set - неупорядоченная коллекция без дубликатов (все значения уникальны).
      */
 
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 

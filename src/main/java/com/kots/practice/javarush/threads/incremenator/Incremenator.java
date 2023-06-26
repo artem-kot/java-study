@@ -12,9 +12,9 @@ public class Incremenator extends Thread {
         do {
             if (!isInterrupted()) {
                 if (mIsIncrement) {
-                    Program.mValue ++;
+                    Program.mValue++;
                 } else {
-                    Program.mValue --;
+                    Program.mValue--;
                 }
                 System.out.print(Program.mValue + " ");
             } else {

@@ -10,27 +10,30 @@ public class LinkedListTask1314 {
     private Node first = new Node();
     private Node last = new Node();
 
+    public static void main(String[] args) {
+        LinkedListTask1314 stringLinkedList = new LinkedListTask1314();
+        stringLinkedList.add("1");
+        stringLinkedList.add("2");
+        stringLinkedList.add("3");
+        stringLinkedList.add("4");
+        stringLinkedList.add("5");
+        stringLinkedList.add("6");
+        stringLinkedList.add("7");
+        stringLinkedList.add("8");
+        stringLinkedList.add("9");
+        stringLinkedList.printAll();
+
+        System.out.println(stringLinkedList.get(-1));
+        System.out.println(stringLinkedList.get(0));
+        System.out.println(stringLinkedList.get(1));
+        System.out.println(stringLinkedList.get(20));
+    }
+
     public void printAll() {
         Node currentElement = first.next;
         while ((currentElement) != null) {
             System.out.println(currentElement.value);
             currentElement = currentElement.next;
-        }
-    }
-
-//    My add() method below
-    public void add(String value) {
-        Node node = new Node();
-        if (first.next == null) {
-            first.next = last;
-            node.prev = last;
-            last.value = value;
-            last = node;
-        } else {
-            node.prev = last;
-            last.prev.next = last;
-            last.value = value;
-            last = node;
         }
     }
 
@@ -55,7 +58,23 @@ public class LinkedListTask1314 {
 //        last.prev = node;
 //    }
 
-//    edge cases: index -1, index 0, index 1
+    //    My add() method below
+    public void add(String value) {
+        Node node = new Node();
+        if (first.next == null) {
+            first.next = last;
+            node.prev = last;
+            last.value = value;
+            last = node;
+        } else {
+            node.prev = last;
+            last.prev.next = last;
+            last.value = value;
+            last = node;
+        }
+    }
+
+    //    edge cases: index -1, index 0, index 1
     public String get(int index) {
         Node node = first.next;
         while (node.next != null && index > 0) {
@@ -70,26 +89,6 @@ public class LinkedListTask1314 {
         private Node prev;
         private String value;
         private Node next;
-    }
-
-
-    public static void main(String[] args) {
-        LinkedListTask1314 stringLinkedList = new LinkedListTask1314();
-        stringLinkedList.add("1");
-        stringLinkedList.add("2");
-        stringLinkedList.add("3");
-        stringLinkedList.add("4");
-        stringLinkedList.add("5");
-        stringLinkedList.add("6");
-        stringLinkedList.add("7");
-        stringLinkedList.add("8");
-        stringLinkedList.add("9");
-        stringLinkedList.printAll();
-
-        System.out.println(stringLinkedList.get(-1));
-        System.out.println(stringLinkedList.get(0));
-        System.out.println(stringLinkedList.get(1));
-        System.out.println(stringLinkedList.get(20));
     }
 }
 

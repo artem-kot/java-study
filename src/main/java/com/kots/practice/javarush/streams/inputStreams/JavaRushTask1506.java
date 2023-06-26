@@ -5,7 +5,7 @@ Write a program which takes file path from the console and then prints file's co
 Program is expected to read all the characters besides space, comma, and period.
  */
 
-import java.io.*;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -19,6 +19,7 @@ public class JavaRushTask1506 {
                 line = line.replaceAll("\\s|\\.|,", "");
                 System.out.println(line);
             }
-        } catch (IOException ignored) {}
+        } catch (IOException ignored) {
+        }
     }
 }

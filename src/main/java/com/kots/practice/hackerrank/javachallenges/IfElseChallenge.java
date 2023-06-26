@@ -23,6 +23,7 @@ public class IfElseChallenge {
     /**
      * The method is created explicitly for unit test of the provided solution,
      * which can be found in test/java/com.kots.practice.hackerrank.javachallenges/IfElseChallengeTest
+     *
      * @param n input parameter, which can be parameterized.
      * @return String with a result according to a task.
      */

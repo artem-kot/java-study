@@ -15,21 +15,6 @@ public class PlaygroundMapCaching {
     private static final Map<String, ArrayList<String>> dialogs = new HashMap<>();
     private final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss.SS");
 
-    private void logMessage(String userId, String initiator, String request, String response) {
-        ArrayList<String> input = new ArrayList<>();
-        input.add(dtf.format(LocalTime.now()) + " >> " + initiator + " : " + request);
-        input.add(dtf.format(LocalTime.now()) + " >> Lara: " + response);
-
-        if (dialogs.containsKey(userId)) {
-            updateDialog(userId, input);
-        } else {
-            dialogs.put(userId, input);
-        }
-
-        System.out.println("Dialogs: " + dialogs.size());
-        System.out.println("Users: " + Arrays.toString(dialogs.keySet().toArray()));
-    }
-
     private static void updateDialog(String userId, ArrayList<String> input) {
         int limit = 8;
         if (dialogs.get(userId).size() >= limit) {
@@ -60,5 +45,20 @@ public class PlaygroundMapCaching {
         Map json = gson.fromJson(message, Map.class);
         System.out.println(json.entrySet());
         System.out.println(json.keySet().toArray()[0]);
+    }
+
+    private void logMessage(String userId, String initiator, String request, String response) {
+        ArrayList<String> input = new ArrayList<>();
+        input.add(dtf.format(LocalTime.now()) + " >> " + initiator + " : " + request);
+        input.add(dtf.format(LocalTime.now()) + " >> Lara: " + response);
+
+        if (dialogs.containsKey(userId)) {
+            updateDialog(userId, input);
+        } else {
+            dialogs.put(userId, input);
+        }
+
+        System.out.println("Dialogs: " + dialogs.size());
+        System.out.println("Users: " + Arrays.toString(dialogs.keySet().toArray()));
     }
 }

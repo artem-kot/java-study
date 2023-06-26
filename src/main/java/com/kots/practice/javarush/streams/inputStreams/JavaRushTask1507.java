@@ -1,6 +1,5 @@
 package com.kots.practice.javarush.streams.inputStreams;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -17,7 +16,7 @@ public class JavaRushTask1507 {
         try (Scanner scanner = new Scanner(System.in)) {
             List<String> content = Files.readAllLines(Paths.get(scanner.nextLine()));
             for (int i = 0; i < content.size(); i++) {
-                if(i % 2 == 0) {
+                if (i % 2 == 0) {
                     System.out.println(content.get(i));
                 }
             }

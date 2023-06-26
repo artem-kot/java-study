@@ -12,8 +12,9 @@ public class Program {
         mInc.start();
         for (int i = 0; i < 3; i++) {
             try {
-                sleep(i*2*1000);
-            } catch (InterruptedException ignored){}
+                sleep(i * 2 * 1000);
+            } catch (InterruptedException ignored) {
+            }
             mInc.changeAction();
         }
         mInc.interrupt();

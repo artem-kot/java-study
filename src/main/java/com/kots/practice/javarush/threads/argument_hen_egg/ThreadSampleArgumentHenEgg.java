@@ -3,6 +3,9 @@ package com.kots.practice.javarush.threads.argument_hen_egg;
 import static java.lang.Thread.sleep;
 
 public class ThreadSampleArgumentHenEgg {
+    static Egg eggArgument;
+    static Hen henArgument;
+
     public static void argumentor(String argument) {
         for (int i = 0; i < 5; i++) {
             try {
@@ -13,9 +16,6 @@ public class ThreadSampleArgumentHenEgg {
             System.out.println(argument);
         }
     }
-
-    static Egg eggArgument;
-    static Hen henArgument;
 
     public static void main(String[] args) throws InterruptedException {
         henArgument = new Hen();
@@ -29,16 +29,18 @@ public class ThreadSampleArgumentHenEgg {
         while (henArgument.isAlive() && eggArgument.isAlive()) {
             sleep(1000);
         }
-        if (henArgument.isAlive()){
+        if (henArgument.isAlive()) {
             try {
                 henArgument.join();
                 System.out.println("Hen won!");
-            } catch (InterruptedException ignored) {}
+            } catch (InterruptedException ignored) {
+            }
         } else if (eggArgument.isAlive()) {
             try {
                 eggArgument.join();
                 System.out.println("Egg won!");
-            } catch (InterruptedException ignored) {}
+            } catch (InterruptedException ignored) {
+            }
         } else {
             System.out.println("The last one wins.");
         }

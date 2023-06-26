@@ -11,6 +11,20 @@ public class LinkedListTask1313 {
     private Node first = new Node();
     private Node last = new Node();
 
+    public static void main(String[] args) {
+        LinkedListTask1313 stringLinkedList = new LinkedListTask1313();
+        stringLinkedList.add("1");
+        stringLinkedList.add("2");
+        stringLinkedList.add("3");
+        stringLinkedList.add("4");
+        stringLinkedList.add("5");
+        stringLinkedList.add("6");
+        stringLinkedList.add("7");
+        stringLinkedList.add("8");
+        stringLinkedList.add("9");
+        stringLinkedList.printAll();
+    }
+
     public void printAll() {
         Node currentElement = first.next;
         while ((currentElement) != null) {
@@ -38,21 +52,6 @@ public class LinkedListTask1313 {
         private Node prev;
         private String value;
         private Node next;
-    }
-
-
-    public static void main(String[] args) {
-        LinkedListTask1313 stringLinkedList = new LinkedListTask1313();
-        stringLinkedList.add("1");
-        stringLinkedList.add("2");
-        stringLinkedList.add("3");
-        stringLinkedList.add("4");
-        stringLinkedList.add("5");
-        stringLinkedList.add("6");
-        stringLinkedList.add("7");
-        stringLinkedList.add("8");
-        stringLinkedList.add("9");
-        stringLinkedList.printAll();
     }
 }
 
