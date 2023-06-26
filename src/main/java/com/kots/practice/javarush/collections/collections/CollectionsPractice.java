@@ -2,13 +2,12 @@ package com.kots.practice.javarush.collections.collections;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 
 /**
  * java.util.Collections - специальный класс с большим количеством методов, которые помогают при работе
  * с коллекциями. По аналогии с java.util.Arrays.
- *
+ * <p>
  * Полезные методы:
  * Collections.replaceAll(list, oldValue, newValue); replaces old values with new values in the list.
  * Collections.reverse(list); reverses the list.

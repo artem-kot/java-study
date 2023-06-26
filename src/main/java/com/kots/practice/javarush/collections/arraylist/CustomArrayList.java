@@ -38,7 +38,7 @@ public class CustomArrayList {
         array = Arrays.copyOf(array, size + 1);
         Integer[] temp = Arrays.copyOfRange(array, index, array.length);
         for (int i = index; i < array.length - 1; i++) {
-            array[i+1] = temp[i - index];
+            array[i + 1] = temp[i - index];
         }
         array[index] = number;
         size++;
