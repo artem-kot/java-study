@@ -27,7 +27,7 @@ public class Arrays2Sorting extends Arrays0Utils {
     /*
     We start with one of the easiest to implement.
      */
-    private int[] bubbleSort (int[] arr) {
+    int[] bubbleSort (int[] arr) {
         var array = copyArray(arr);
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
