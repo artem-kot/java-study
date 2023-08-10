@@ -20,50 +20,21 @@ package com.kots.practice.javarush.arrays;
  * We can also create multidimensional arrays.
  * type[][] name = {{value1, value2}, {value3}};
  */
-public class Arrays1Declaration {
+public class Arrays1Declaration extends Arrays0Utils {
 
     int[] array1 = new int[] {1,2,3};
     int[] array2 = {1,2,3};
     int[] array3 = new int[3];
     int[][] array4 = {{1, 2}, {3}};
-    private void fillArray (int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i+1;
-        }
-    }
-
-    private void printArray(int[] array) {
-        for(int i = 0; i < array.length; i++) {
-            if (i != array.length - 1) {
-                System.out.print(array[i] + ", ");
-            } else {
-                System.out.print(array[i]);
-            }
-        }
-        System.out.println();
-    }
-
-    private void printArray(int[][] array) {
-        for(int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                if (j != array[i].length-1 || i != array.length-1) {
-                    System.out.print(array[i][j] + ", ");
-                } else {
-                    System.out.print(array[i][j]);
-                }
-            }
-        }
-        System.out.println();
-    }
 
     public static void main(String[] args) {
         Arrays1Declaration task = new Arrays1Declaration();
-        task.fillArray(task.array3);
+        fillArrayWithDefaultIntegers(task.array3);
 
-        task.printArray(task.array1);
-        task.printArray(task.array2);
-        task.printArray(task.array3);
-        task.printArray(task.array4);
+        printArray(task.array1);
+        printArray(task.array2);
+        printArray(task.array3);
+        printArray(task.array4);
     }
 
 }
