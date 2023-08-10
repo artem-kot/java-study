@@ -1,5 +1,7 @@
 package com.kots.practice.javarush.arrays;
 
+import java.util.Date;
+
 /**
  * There are several important operations we can do with the arrays.
  * Operation 1. Sorting.
@@ -17,7 +19,7 @@ package com.kots.practice.javarush.arrays;
  * Merge Sort
  * Heap Sort
  */
-public class Arrays2Sorting {
+public class Arrays2Sorting extends Arrays0Utils {
 
     int[] array = {-6, 17, 5, 0, 9, -1, 10};
 
@@ -53,30 +55,73 @@ public class Arrays2Sorting {
         return array;
     }
 
-    private void printArray(int[] array) {
-        for(int i = 0; i < array.length; i++) {
-            if (i != array.length - 1) {
-                System.out.print(array[i] + ", ");
-            } else {
-                System.out.print(array[i]);
-            }
+
+    /*
+    Now one of the most popular ones: quick sort.
+     */
+
+    private int[] quickSort(int[] array, int low, int high) {
+        if (low < high) {
+            int pivotIndex = quickSortPartition(array, low, high);
+            quickSort(array, low, pivotIndex-1);
+            quickSort(array, pivotIndex+1, high);
         }
-        System.out.println();
+        return array;
     }
 
-    private int[] copyArray(int[] array) {
-        int[] copy = new int[array.length];
-        for (int i = 0; i < array.length; i++) {
-            copy[i] = array[i];
+    private int quickSortPartition(int[] array, int low, int high){
+        int pivot = array[high];
+        int i = low-1;
+
+        for (int j = low; j < high; j++) {
+            if (array[j] <= pivot) {
+                i++;
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
         }
-        return copy;
+
+        var temp = array[i+1];
+        array[i+1] = array[high];
+        array[high] = temp;
+        return i+1;
     }
 
     public static void main(String[] args) {
         Arrays2Sorting task = new Arrays2Sorting();
-        task.printArray(task.array);
-        task.printArray(task.bubbleSort(task.array));
-        task.printArray(task.bubbleSortReverse(task.array));
+        printArray(task.array);
+        printArray(task.bubbleSort(task.array));
+        printArray(task.bubbleSortReverse(task.array));
+
+        printArray(task.array);
+        var array = copyArray(task.array);
+        printArray(task.quickSort(array, 0, array.length-1));
+
+        /*
+        Let's measure time for execution of each algorithm.
+         */
+
+        Date currentTime = new Date();
+
+        /*
+        some operation here
+         */
+
+        System.out.println("Starting bubble sort");
+        Date start = new Date();
+        task.bubbleSort(task.array);
+        System.out.println("Completed in: " + (start.getTime() - currentTime.getTime()));
+
+        var array2 = copyArray(task.array);
+        System.out.println("Starting quick sort");
+        start = new Date();
+        task.quickSort(array2, 0, array2.length-1);
+        System.out.println("Completed in: " + (start.getTime() - currentTime.getTime()));
     }
+
+    /*
+    Results show that sorting an array of 7 elements is faster with bubble sort.
+     */
 
 }
