@@ -16,7 +16,7 @@ import java.util.Random;
  */
 public class RandomClassMethods {
     public static void main(String[] args) {
-        //let's return random numbers from range 25-50.
+        //let's return random numbers, either 25 or 50.
         for (int i = 100; i > 0; i--) {
             Random r = new Random();
             int number = r.nextInt(26) + 25;
