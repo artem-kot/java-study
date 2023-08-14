@@ -103,11 +103,6 @@ public class Arrays2Sorting extends Arrays0Utils {
          */
 
         Date currentTime = new Date();
-
-        /*
-        some operation here
-         */
-
         System.out.println("Starting bubble sort");
         Date start = new Date();
         task.bubbleSort(task.array);
@@ -115,13 +110,9 @@ public class Arrays2Sorting extends Arrays0Utils {
 
         var array2 = copyArray(task.array);
         System.out.println("Starting quick sort");
+        currentTime = new Date();
         start = new Date();
         task.quickSort(array2, 0, array2.length-1);
         System.out.println("Completed in: " + (start.getTime() - currentTime.getTime()));
     }
-
-    /*
-    Results show that sorting an array of 7 elements is faster with bubble sort.
-     */
-
 }
