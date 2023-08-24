@@ -1,9 +1,9 @@
 package com.kots.practice.javarush.collections.arraylist;
 
-import org.apache.commons.lang3.RandomUtils;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -14,7 +14,7 @@ class CustomArrayListTest {
     private CustomArrayList prepareTestData(int size) {
         CustomArrayList list = new CustomArrayList();
         for (int i = 0; i < size; i++) {
-            list.add(RandomUtils.nextInt(0, 20));
+            list.add((int) (Math.random() *3));
         }
         return list;
     }

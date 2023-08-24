@@ -22,7 +22,8 @@ public class Arrays4Collections extends Arrays0Utils {
     Integer[] list4numbers = {5, 16, -1, 12, 9, 3};
     List<Integer> list4 = List.of(list4numbers);
 
-    List<Integer> list5 = new ArrayList<>(list4);
+    List<Integer> list5 = new ArrayList<>(List.of(list4numbers));
+    List<Integer> list6 = new ArrayList<>(list4);
 
     /*
     Copying.
