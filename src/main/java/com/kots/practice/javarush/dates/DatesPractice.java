@@ -35,5 +35,11 @@ public class DatesPractice {
 //        Let's format the output.
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-YYYY HH:mm:SS");
         System.out.println(formatter.format(birthday));
+
+//        Let's also parse the date from a string.
+        Date parsedDate = new Date();
+        parsedDate.setTime(Date.parse("Sep 4 11:09:16 2023"));
+//        Date date = new Date("Sep 4 11:09:16 2023"); will also work here.
+        System.out.println(parsedDate);
     }
 }
