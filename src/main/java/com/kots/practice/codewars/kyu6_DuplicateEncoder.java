@@ -5,6 +5,7 @@ package com.kots.practice.codewars;
 public class kyu6_DuplicateEncoder {
     static String encode(String word) {
         StringBuilder result = new StringBuilder(word);
+        word = word.toLowerCase();
         for (int i = 0; i < word.length(); i++) {
             if (word.substring(0, i).contains(String.valueOf(word.charAt(i))) || word.substring(i+1).contains(String.valueOf(word.charAt(i)))) {
                 result.replace(i, i + 1, ")");

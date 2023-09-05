@@ -21,6 +21,8 @@ public class kyu6_DuplicateEncoderTest {
     @Parameterized.Parameters
     public static String[][] parameters() {
         return new String[][] {
+                {"   ()(   ", "))))())))"},
+                {"Prespecialized", ")()())()(()()("},
                 {"test", ")(()"},
                 {" ", "("},
                 {"  ", "))"},
