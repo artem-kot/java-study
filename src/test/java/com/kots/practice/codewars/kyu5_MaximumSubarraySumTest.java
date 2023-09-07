@@ -32,5 +32,6 @@ public class kyu5_MaximumSubarraySumTest {
     @Test
     public void sequenceTest() {
         assertEquals(expectedResult, kyu5_MaximumSubarraySum.sequence(arr));
+        assertEquals(expectedResult, kyu5_MaximumSubarraySum.sequence2(arr));
     }
 }

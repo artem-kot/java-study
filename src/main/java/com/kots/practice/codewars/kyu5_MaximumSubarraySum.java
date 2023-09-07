@@ -72,14 +72,32 @@ public class kyu5_MaximumSubarraySum {
         return true;
     }
 
+    /*
+    There is an easier and much-much smarter solution.
+    We save the first element to maxAtPoint variable. Then compare it with maxAtPoint + next element.
+    If it's bigger than maxAtPoint, we overwrite maxAtPoint with this new value.
+    We also set overallMax variable and save there maxAtPoint
+     */
+
+    public static int sequence2(int[] arr) {
+        int maxAtPoint = 0, overallMax = 0;
+        for (int i : arr) {
+            maxAtPoint = Math.max(0, maxAtPoint + i);
+            overallMax = Math.max(overallMax, maxAtPoint);
+        }
+        return overallMax;
+    }
+
     public static void main(String[] args) {
         System.out.println(isArrayAllNegative(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
         System.out.println(isArrayAllNegative(new int[]{-2, -1, -3, -4, -1, -2, -1, -5, 0}));
-        System.out.println(sequence(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+        int[] test = new int[] {-2, 1, -3, 4, -1, -2, 0, 1, -5, 7};
+        System.out.println(sequence2(test));
+        System.out.println(sequence(test));
 
-        System.out.println(sequence(new int[]{}));
-        System.out.println(sequence(new int[]{-2, -1, -3, -4, -1, -2, -1, -5, 0}));
-        System.out.println(sequence(new int[]{1,2,3,4,5,6,7,8,9}));
+        System.out.println(sequence2(new int[]{}));
+        System.out.println(sequence2(new int[]{-2, -1, -3, -4, -1, -2, -1, -5, 0}));
+        System.out.println(sequence2(new int[]{1,2,3,4,5,6,7,8,9}));
     }
 
 }
