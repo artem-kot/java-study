@@ -33,7 +33,7 @@ public class kyu5_MaximumSubarraySum {
         if (isArrayAllNegative(arr) || arr.length == 0) return 0;
         if (isArrayAllPositive(arr)) return getSumOfElements(arr);
 
-        for (int i = 0; i < arr.length - 1; i++) {
+        for (int i = 0; i < arr.length; i++) {
             int[] tempArr = new int[arr.length];
             tempArr[i] = arr[i];
             if (getSumOfElements(tempArr) > max) {
